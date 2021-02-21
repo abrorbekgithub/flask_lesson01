@@ -4,9 +4,13 @@ from tinydb import TinyDB
 from flask import Flask
 
 app=Flask(__name__)
+
 @app.route('/')
-
 def hello():
-    return 'it is the first flask file'
+    return 'hello'
 
-app.run()
+@app.route('/home')
+def home():
+    return 'home page'
+    
+app.run(debug=True)
